@@ -1,0 +1,86 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "项目"
+			}
+		},
+		{
+			"path": "pages/resource/resource",
+			"style": {
+				"navigationBarTitleText": "资源"
+			}
+		},
+		{
+			"path": "pages/workbench/workbench",
+			"style": {
+				"navigationBarTitleText": "工作台"
+			}
+		},
+		{
+			"path": "pages/entertainment/entertainment",
+			"style": {
+				"navigationBarTitleText": "娱乐室"
+			}
+		},
+		{
+			"path": "pages/management/management",
+			"style": {
+				"navigationBarTitleText": "管理台"
+			}
+		},
+		{
+			"path": "pages/settings/settings",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/image-gen/image-gen",
+			"style": {
+				"navigationBarTitleText": "图片生成"
+			}
+		},
+		{
+			"path": "pages/doc-analysis/doc-analysis",
+			"style": {
+				"navigationBarTitleText": "文档分析"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "建筑学爸",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#f0f2f5"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#333333",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "项目"
+			},
+			{
+				"pagePath": "pages/resource/resource",
+				"text": "资源"
+			},
+			{
+				"pagePath": "pages/workbench/workbench",
+				"text": "工作台"
+			},
+			{
+				"pagePath": "pages/management/management",
+				"text": "管理"
+			},
+			{
+				"pagePath": "pages/settings/settings",
+				"text": "设置"
+			}
+		]
+	}
+}

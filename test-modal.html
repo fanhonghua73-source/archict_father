@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗测试</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: sans-serif; padding: 20px; }
+
+        .test-btn {
+            padding: 15px 30px;
+            background: #7cb342;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999998;
+        }
+
+        .modal-content {
+            width: 500px;
+            max-height: 80vh;
+            background: white;
+            border-radius: 16px;
+            overflow: visible;
+            z-index: 999999;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            font-size: 30px;
+            color: #999;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+
+        .modal-body {
+            padding: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background: #fff;
+            color: #333;
+        }
+
+        .form-input:focus {
+            border-color: #7cb342;
+            outline: none;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>弹窗输入测试</h1>
+    <p>点击按钮打开弹窗，测试输入框是否可用</p>
+    <br>
+    <button class="test-btn" onclick="openModal()">打开弹窗</button>
+
+    <div id="modal" class="modal-overlay hidden">
+        <div class="modal-mask" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">测试弹窗</span>
+                <span class="modal-close" onclick="closeModal()">×</span>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">测试输入框 1</label>
+                    <input type="text" class="form-input" placeholder="请输入内容..." />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">测试输入框 2</label>
+                    <input type="text" class="form-input" placeholder="请输入内容..." />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">测试输入框 3</label>
+                    <input type="text" class="form-input" placeholder="请输入内容..." />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            console.log('打开弹窗');
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            console.log('关闭弹窗');
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
